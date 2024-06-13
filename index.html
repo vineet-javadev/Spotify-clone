@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- exact title -->
+    <!-- <title>Spotify - Web Player: Music for everyone</title> -->
+    <!-- not exact title of website-->
+    <title>Spotify :: Clone</title>
+
+    <link rel="stylesheet" href="css/utility.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- adding fav icon -->
+    <!-- icon store in locally -->
+    <link rel="icon" sizes="32x32" type="image/png" href="/website-logo.ico" />
+    <!-- icon use by link -->
+    <link
+      rel="icon"
+      sizes="16x16"
+      type="image/png"
+      href="https://open.spotifycdn.com/cdn/images/favicon16.1c487bff.png"
+    />
+    <link
+      rel="icon"
+      href="https://open.spotifycdn.com/cdn/images/favicon.0f31d2ea.ico"
+    />
+  </head>
+  <body>
+    <div class="home bg-black p-7 flex gap-7">
+
+      <!-- this is only for mobile -->
+      <div class="mob-header round bg-lightGray">
+        <img src="resources/images/icons/logo.svg" alt="logo" />
+          <img id="menu-btn" src="resources/images/icons/menuIcon.svg" alt="setting icon" />
+      </div>
+
+      <!-- this is left panel -->
+      <div class="left flex flex-direction-c gap-7">
+        <div class="top bg-gray round flex flex-direction-c justify-content-sb">
+          <div class="logo">
+            <img id="logo" src="resources/images/icons/logo.svg" alt="Spotify logo" />
+          </div>
+          <div class="menu primary-text">
+            <ol class="flex justify-content-sb align-content-end">
+              <li class="flex gap-7 white-text align-content">
+                <img src="resources/images/icons/homeIcon.svg" alt="homeIcon" />
+                <span>Home</span>
+              </li>
+              <li class="flex gap-7 gray-text align-content">
+                <img src="resources/images/icons/searchIcon.svg" alt="searchIcon" />
+                <span>Search</span>
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="bottom bg-gray round p-7">
+          <div class="head-bottom flex align-content gap-7 justify-content-sb">
+            <span class="flex align-content gap-7 p-lib primary-text">
+              <span>
+                <img class="cross-btn-style" src="resources/images/icons/libraryIcon.svg" alt="libraryIcon" />
+              </span>
+              <span class="gray-text">Your Library</span>
+            </span>
+            <span>
+              <img class="cross-btn-style" id="cross-btn" src="resources/images/icons/crossIcon.svg" alt="">
+            </span>
+            <!-- <span>
+              <img src="resources/images/plusIcon.svg" alt="plusIcon">
+            </span> -->
+          </div>
+          <div class="songsList-outerContainer">
+            <div class="songsList">
+              <ol></ol>
+            </div>
+        </div>
+          <!-- <div class="bottom-content-first bg-lightGray">
+            <h4 class="white-text primary-text">Create your first playlist</h2>
+            <h6 class="white-text secondary-text">It's easy, we'll help you</h3>
+            <button class="btn primary-btn secondary-text">Create playlist</button>
+          </div>
+          <div class="bottom-content-first bg-lightGray">
+            <h4 class="white-text primary-text">Let's find some podcasts to follow</h2>
+            <h6 class="white-text secondary-text">We'll keep you updated on new episodes</h3>
+            <button class="btn primary-btn secondary-text">Browse podcasts</button>
+          </div> -->
+
+          <!-- <div class="bottom-bottom p-7 row-wrap">
+            <div>
+              <ul class="flex gap-7 smaller-text">
+                <li><a href="#">Legal</a></li>
+                <li><a href="#">Safety & Privacy Center</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Cookies</a></li>
+              </ul>
+            </div>
+            <div>
+              <ul class="flex gap-7">
+                <li><a href="#">About Ads</a></li>
+                <li><a href="#">Accessibility</a></li>
+                <li><a href="#">Cookies</a></li>
+              </ul >
+            </div>
+            <div>
+              <ul class="flex gap-7">
+                <li><a href="#" class="hover-underline">Cookies</a></li>
+              </ul>
+            </div>
+            <button class="primary-btn flex align-content gap-7 invert primary-text"><img src="resources/images/earthIcon.svg" alt="earthIcon">English</button>
+          </div> -->
+        </div>
+      </div>
+
+      <!-- right of main container -->
+      <div class="right bg-gray round  overflow-y">
+        <div
+          class="header bg-gray position-sticky top-0 flex align-content justify-content-sb"
+        >
+          <span class="flex align-content">
+            <button
+              class="bg-black round-btn white-text flex align-content justify-content"
+            >
+              <img src="resources/images/icons/lessThanIcon.svg" alt="lessThanIcon" />
+            </button>
+            <button
+              class="btn bg-black round-btn white-text flex align-content justify-content"
+            >
+              <img
+                src="resources/images/icons/greaterThanIcon.svg"
+                alt="greaterThanIcon"
+              />
+            </button>
+          </span>
+
+          <span class="flex align-content gap-7">
+            <span class="gray-text btn primary-text">Sign Up</span>
+            <button class="btn primary-btn secondary-text ">Log in</button>
+          </span>
+        </div>
+
+        <div class="container">
+          <div class="headline flex justify-content-sb align-content">
+            <h2 class="p-7 super-text"><a href="#">Popular Artists</a></h2>
+            <span class="light-font bg-gray secondary-text"
+              ><a id="a1" href="#">Show all</a></span
+            >
+          </div>
+          <div class="artist-list flex overflow-x" id="b1">
+            <!-- card no 1 -->
+            <!-- <div id="artists-card" class="card" data-folder="RBsongs">
+              <div class="play">
+                <img src="resources/images/icons/playGreenBtn.svg" alt="playGreenBtn">
+              </div>
+              <div class="thumbnail">
+                <img src="resources/images/artists/pritam.jpg" alt="" />
+              </div>
+              <div class="details">
+                <h5>Pritam</h5>
+                <h6 class="gray-text">Artist</h6>
+              </div>
+            </div> -->
+          </div>
+
+          <div class="headline flex justify-content-sb align-content">
+            <h2 class="p-7 super-text"><a href="#">Popular Playlists</a></h2>
+            <span class="light-font bg-gray secondary-text"
+              ><a href="#" id="a2">Show all</a></span
+            >
+          </div>
+          <div id="b2" class="artist-list flex overflow-x">
+            <!-- card no 1 -->
+            <!-- <div class="card">
+              <div class="thumbnail">
+                <img src="resources/images/artists/pritam.jpg" alt="" />
+              </div>
+              <div class="details">
+                <h5>Pritam</h5>
+                <h6 class="gray-text">Artist</h6>
+              </div>
+            </div> -->
+          </div>
+
+          <div class="headline flex justify-content-sb align-content">
+            <h2 class="p-7 super-text"><a href="#">Genre Hits</a></h2>
+            <span class="light-font bg-gray secondary-text"
+              ><a href="#" id="a3">Show all</a></span
+            >
+          </div>
+          <div id="b3" class="artist-list flex overflow-x">
+           
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- footer section -->
+    <div class="footer white-text p-7 flex gap-7 align-content border-box">
+      <div
+        class="controller white-text "
+      >
+    <span class="flex gap-7 align-content primary-text"  id="currentSongTitle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="38" height="38" color="#000000" fill="none">
+      <path d="M21.5 12.5C21.5 18.0228 17.0228 22.5 11.5 22.5C5.97715 22.5 1.5 18.0228 1.5 12.5C1.5 6.97715 5.97715 2.5 11.5 2.5C12.6688 2.5 13.7907 2.70051 14.8333 3.06902" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+      <path d="M19.5 9C19.5 10.3807 18.3807 11.5 17 11.5C15.6193 11.5 14.5 10.3807 14.5 9C14.5 7.61929 15.6193 6.5 17 6.5C18.3807 6.5 19.5 7.61929 19.5 9ZM19.5 9V1.5C19.8333 2 20.1 4.1 22.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M13 12.5C13 11.6716 12.3284 11 11.5 11C10.6716 11 10 11.6716 10 12.5C10 13.3284 10.6716 14 11.5 14C12.3284 14 13 13.3284 13 12.5Z" stroke="currentColor" stroke-width="1.5" />
+  </svg> <span class="w-title">Firstly!&nbsp; Pickup a Song...</span></span>
+    
+      </div>
+
+
+      <div class="flex align-content justify-content w-100 gap-7 flex-direction-c">
+        <div class="w-100 flex align-content justify-content w-100 gap-7 trackUpdate">
+        <span class="white-text primary-text">00:00</span>
+        <div class="seekbar">
+          <div class="circle"></div>
+          </div>
+        <span class="white-text primary-text">00:00</span>
+        </div>
+        <div class="flex justify-content  align-content gc w-100">
+        <div>
+            <img class="previous scale drop-shadow" id="previous" src="resources/images/icons/previousIcon.svg" alt="previousIcon">
+            <img class="play-pause scale drop-shadow" id="play-pause" src="resources/images/icons/playIcon.svg" alt="play-pause">
+            <img class="next scale drop-shadow" id="next" src="resources/images/icons/nextIcon.svg" alt="nextIcon">
+        </div>
+        <div class="volume flex align-content gap-7 ">
+          <label for="volumeRange"><img class="cursor-pointer" src="resources/images/icons/unmute.svg" alt="volume"></label>
+          <input class="cursor-pointer" type="range" name="volume" id="volumeRange">
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
